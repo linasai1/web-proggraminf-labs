@@ -8,7 +8,7 @@ def start():
 
 @app.route("/menu")
 def menu():
-    return """
+    return '''
     <!doctype html>
     <html>
         <head>
@@ -19,25 +19,20 @@ def menu():
             <header>
                 НГТУ, ФБ, WEB-программирование, часть 2. Список лабораторных.
             </header>
-
-            <main>
-                <ol>
-                    <li>
-                        <a href="/lab1" target="_blank">Лабораторная работа 1</a>
-                    </li>
-                </ol>
-            </main>
+            <h1>
+                <a href="/lab1">Лабораторная работа 1</a>
+            </h1>
 
             <footer>
                 &copy; Сайфулина Алина, ФБИ-13, 3 курс, 2023
             </footer>
         </body>
     </html>
-    """
+    '''
 
 @app.route("/lab1")
 def lab1():
-    return """
+    return '''
     <!doctype html>
     <html>
         <head>
@@ -48,21 +43,26 @@ def lab1():
             <header>
                 НГТУ, ФБ, Лабораторная работа 1
             </header>
-
-            <main>
-                <div>
+            <h1>
+                Web-сервер на flask
+            </h1>
+            <p>
                     Flask — фреймворк для создания веб-приложений на языке программирования Python, использующий набор инструментов Werkzeug, 
                     а также шаблонизатор Jinja2. Относится к категории так называемых микрофреймворков — минималистичных каркасов веб-приложений, 
                     сознательно предоставляющих лишь самые базовые возможности.
-                </div>
-            </main>
-
+            </p>
+                <div><a href="/menu">Меню</a></div>
+                <h2>Реализованные роуты</h2>
+                <div><a href="/lab1/oak">/lab1/oak - дуб</a></div>
+                <div><a href="/lab1/student">/lab1/student - студент</a></div>
+                <div><a href="/lab1/python">/lab1/python - python </a></div>
+                <div><a href="/lab1/pear">/lab1/pear - грушевый штрудель </a></div>
             <footer>
                 &copy; Сайфулина Алина, ФБИ-13, 3 курс, 2023
             </footer>
         </body>
     </html>
-    """
+    '''
 @app.route('/lab1/oak')
 def oak ():
     return '''
@@ -77,4 +77,51 @@ def oak ():
         </body>
     </html>
     '''
+@app.route('/lab1/student')
+def student ():
+    return '''
+    <!doctype html>
+    <html>
+        <head> 
+            <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+        </head>
+        <body>
+            <h1> Сайфулина Алина Витальевна </h1>
+            <img src="''' + url_for('static', filename='nstu.jpg') + '''">
+        </body>
+    </html>
+    '''
 
+@app.route('/lab1/python')
+def python ():
+    return '''
+    <!doctype html>
+    <html>
+        <head> 
+            <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+        </head>
+        <body>
+            <div>Python — это язык программирования, который широко используется в интернет-приложениях, разработке программного обеспечения, науке о данных и машинном обучении (ML). Разработчики используют Python, потому что он эффективен, прост в изучении и работает на разных платформах.  </div>
+            <div>Программы на языке Python можно скачать бесплатно, они совместимы со всеми типами систем и повышают скорость разработки. </div>
+            <img src="''' + url_for('static', filename='python.jpg') + '''">
+        </body>
+    </html>
+    '''
+@app.route ('/lab1/EQ')
+def pear ():
+    return '''
+    <!doctype html>
+    <html>
+        <head> 
+            <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
+        </head>
+        <body>
+        <div> Эмоциональный интеллект (EQ) — это способность личности осознавать и понимать свои эмоции и чувства других людей<br>
+        и использовать эти навыки во взаимодействии с окружающими.</div>
+        <div> В практическом смысле это совокупность навыков, благодаря которым человек понимает, что его эмоции могут управлять его поведением<br>
+        и влиять на окружающих — причем не только позитивно, но и негативно. В английском языке для обозначения эмоционального интеллекта по аналогии<br>
+        с IQ используется аббревиатура EQ — «emotional quotient», или «эмоциональный коэффициент», а также сокращение EI — «emotional intelligence». </div>
+        <img src="''' + url_for('static', filename='eq.jpg') + '''">
+        </body>
+    </html>
+    '''
