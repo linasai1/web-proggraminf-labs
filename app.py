@@ -130,4 +130,6 @@ def EQ ():
     '''
 @app.route('/lab2/example')
 def example():
-    return render_template('example.html')
+    name = 'Алина Сайфулина'
+    return render_template ("example.html", name = name)
+    
