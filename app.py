@@ -128,11 +128,11 @@ def EQ ():
         </body>
     </html>
     '''
-@lab2.route('/lab2/')
+@app.route('/lab2/')
 def lab():
     return render_template('lab2.html')
 
-@lab2.route('/lab2/example')
+@app.route('/lab2/example')
 def example():
     name = 'Алина Сайфулина'
     numCour = '3'
