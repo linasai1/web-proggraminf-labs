@@ -15,7 +15,13 @@
     <main>
         11x28 = {{11*28}}<br>
         8452/793 = {{8425/793}}<br>
-        45**8 = {{45**8}}
+        45**8 = {{45**8}}<br>
+
+    <ul>
+        {% for f in fruits %}
+        <li>{{f.name}}: {{price}} &#x20bd;</li>
+        {% endfor %}
+    </ul>
     </main>
 
     <footer>
