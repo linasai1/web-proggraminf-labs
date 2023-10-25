@@ -23,6 +23,10 @@ def menu():
                 <a href="/lab1">Лабораторная работа 1</a>
             </h1>
 
+            <h2>
+                <a href="/lab2">Лабораторная работа 2</a>
+            </h2>
+
             <footer>
                 &copy; Сайфулина Алина, ФБИ-13, 3 курс, 2023
             </footer>
@@ -162,4 +166,7 @@ def example():
     return render_template('example.html', name = name, 
             numCour = numCour, group = group, labNum = labNum, fruits = fruits, books = books)
 
+@app.route('/lab2/cars/')
+def puppys():
+    return render_template('cars.html')
     
