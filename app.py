@@ -132,7 +132,6 @@ def EQ ():
 def lab():
     return render_template('lab2.html')
 
-
 @lab2.route('/lab2/example')
 def example():
     name = 'Алина Сайфулина'
