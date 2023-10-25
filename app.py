@@ -144,7 +144,7 @@ def example():
         {'name': 'апельсины', 'price': 80}, 
         {'name': 'мандарины', 'price': 95}, 
         {'name': 'манго', 'price': 321}
-        ]
+    ]
 
     books = [
         {'authorName' : 'Ф.М. Достоевский', 'bookName' : 'Преступление и наказание', 'kind': 'Роман', 'pages': 500},
