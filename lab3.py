@@ -48,3 +48,18 @@ def pay():
 def success():
     return render_template ('success.html')
 
+
+@lab3.route('/lab3/ticketform/')
+def ticketform():
+    usert = request.args.get('usert')
+    print(f'usert={usert}')
+    aget = request.args.get('aget')
+    kind = request.args.get('kind')
+    baggage = request.args.get('baggage')
+    trainshelf = request.args.get('trainshelf')
+    dispatch = request.args.get('dispatch')
+    arrival = request.args.get('arrival')
+    date = request.args.get('date')
+    return render_template('ticketform.html', usert=usert, aget=aget, kind=kind, baggage=baggage,
+                            trainshelf=trainshelf, dispatch=dispatch, arrival=arrival, date=date)
+
