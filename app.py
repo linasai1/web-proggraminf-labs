@@ -134,26 +134,11 @@ def EQ ():
     '''
 @app.route('/lab2/')
 def lab():
-    return render_template('lab2.html') '''
-     <!doctype html>
-    <html>
-        <head> 
-            <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
-        </head>
-    </html>
-    '''
+    return render_template('lab2.html') 
     
 @app.route('/lab2/example')
 def example():
-    return render_template('example.html', name = name, 
-            numCour = numCour, group = group, labNum = labNum, fruits = fruits, books = books) '''
-     <!doctype html>
-    <html>
-        <head> 
-            <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
-        </head>
     
-        <body>
             name = 'Алина Сайфулина'
             numCour = '3'
             group = 'ФБИ-13'
@@ -178,18 +163,11 @@ def example():
                 {'authorName' : 'Даниэль Дефо', 'bookName' : 'Робинзон Крузо', 'kind': 'Роман', 'pages': 1000},
                 {'authorName' : 'Н.В. Гоголь', 'bookName' : 'Мертвые души', 'kind': 'Роман', 'pages': 627}
             ]
-        </body>
-    </html>
-    '''
+    return render_template('example.html', name = name, 
+            numCour = numCour, group = group, labNum = labNum, fruits = fruits, books = books) 
+
 
 @app.route('/lab2/cars/')
 def puppys():
-    return render_template('cars.html') '''
-     <!doctype html>
-    <html>
-        <head> 
-            <link rel="stylesheet" href="''' + url_for('static', filename='lab1.css') + '''">
-        </head>
-    </html>
-    '''
+    return render_template('cars.html') 
     
