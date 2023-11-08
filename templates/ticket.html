@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block lab %}Лабораторная работа 3{% endblock %}
+
+{%block main%}
+
+    
+    <h1>Ваш билет</h1>
+    
+
+    <div>Ваше ФИО: {{ user }}</div>
+    <div>Возраст: {{ age }}</div>
+    <div>Тип вашего билета: {{ 'Детский' if kind == 'child' else 'Взрослый' }}</div>
+    <div> {{ 'Багажный' if baggage == 'yes' else 'Безбагажный' }}</div>
+    <div> Ваша полка:
+        {% if trainshelf == 'upper' %}
+            Верхняя
+        {% elif trainshelf == 'lower' %}
+            Нижняя
+        {% elif trainshelf == 'upperside' %}
+            Верхняя боковая
+        {% else%}
+            Нижняя боковая
+        {% endif %}</div>
+        <div>Пункт отправления: {{ dispatch }}</div>
+        <div>Пункт прибытия: {{ arrival }}</div>
+        <div>Дата поездки: {{ date }}</div>
+
+
+    <div>
+        <a href="/lab3/ticketform/">Желаете оформить еще один билет?</a>
+    </div>
+    {%endblock%}
