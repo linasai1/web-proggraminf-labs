@@ -23,9 +23,9 @@ def menu():
                 <a href="/lab1">Лабораторная работа 1</a>
             </h1>
 
-            <h2>
+            <h1>
                 <a href="/lab2">Лабораторная работа 2</a>
-            </h2>
+            </h1>
 
             <footer>
                 &copy; Сайфулина Алина, ФБИ-13, 3 курс, 2023
@@ -138,7 +138,7 @@ def lab():
     
 @app.route('/lab2/example')
 def example():
-    
+
             name = 'Алина Сайфулина'
             numCour = '3'
             group = 'ФБИ-13'
