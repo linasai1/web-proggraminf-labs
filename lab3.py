@@ -19,3 +19,4 @@ def form1():
     sex = request.args.get('sex')
 
     return render_template ('form1.html', user=user, age=age, sex=sex, errors=errors)
+    
