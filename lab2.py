@@ -2,12 +2,12 @@ from flask import  Blueprint, redirect, url_for
 lab2 = Blueprint('lab2', __name__)
 
 
-@app.route('/lab2/')
+@lab2.route('/lab2/')
 def lab():
     return render_template('lab2.html') 
 
-    
-@app.route('/lab2/example')
+
+@lab2.route('/lab2/example')
 def example():
     name = 'Алина Сайфулина'
     numCour = '3'
@@ -36,7 +36,7 @@ def example():
     return render_template('example.html', name = name, numCour = numCour, group = group, labNum = labNum, fruits = fruits, books = books) 
 
 
-@app.route('/lab2/cars/')
+@lab2.route('/lab2/cars/')
 def puppys():
     return render_template('cars.html') 
     
