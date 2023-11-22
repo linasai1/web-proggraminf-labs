@@ -1,0 +1,27 @@
+{%extends "base.html"%}
+
+{%block lab%}Лабораторная работа 4{%endblock%}
+
+{%block main%}
+<main class="board">
+<h1>Заказ зерна</h1>
+
+<h2>Пожалуйста, выберите необходимую крупу и ее количество</h2>
+<form method="post">
+    <select name="grain">
+        <option value="Ячмень">Ячмень</option>
+        <option value="oats">Овёс</option>
+        <option value="wheat">Пшеница</option>
+        <option value="rye">Рожь</option>
+    </select><br>
+    
+    <input type="number" placeholder="Вес(тонн)" name = "weight"><br>
+  
+    <button type="submit">Оформить заказ</button>
+</form>
+</main>
+{%endblock%}
+
+{% block menu%}  
+    <a href = '/lab4'><button>Меню работы</button></a>
+{%endblock%}

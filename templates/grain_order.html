@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+
+{%block lab%}Лабораторная работа 4{%endblock%}
+{% block main %}
+    {%if error%}
+    <div>{{error}}</div>
+    {%else%}
+    <h1>Заказ успешно сформирован.</h1>
+    <div>Вы заказали {{ grain }}<br>Вес: {{ weight }} т<br>Сумма к оплате: {{ sum }} руб</div><br>
+    {%if weight>=50 %}
+    <div>Применена скидка 10% за заказ большого объема</div>
+    {%endif%}
+    {%endif%}
+{% endblock %}
+{% block menu%}    
+    <a href="/lab4/grain/"><button>Оформить еще один заказ</button></a>
+
+{% endblock %}
