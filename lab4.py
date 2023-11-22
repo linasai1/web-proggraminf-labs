@@ -95,3 +95,32 @@ def grain():
         return render_template('grain_order.html', grain=grain, weight=weight, 
                                error=error,sum=sum )
     return render_template('grain.html')
+
+
+@lab4.route('/lab4/cookies/', methods=['GET', 'POST'])
+def cookies():
+    if request.method == 'GET':
+        return render_template ('cookies.html')
+    error = ''
+    font_size = request.form.get('font_size')
+    bgc = request.form.get('bgc')
+    text_color = request.form.get('text_color')
+    headers ={
+        'Set-Cookie' : [
+            'bgc=' + bgc + ';path=/',
+            'font_size=' + font_size + ';path=/',
+            'text_color=' + text_color + ';path=/',
+        ],
+        'Location' : '/lab4/cookies'
+    }
+    if not font_size:
+        error = ''
+    else:
+        font_size = int(font_size)
+        if font_size > 30 or font_size < 5:
+            error = 'размер шрифта не соответствует возможному'
+        elif bgc == text_color:
+            error = 'цвет фона не может совпадать с цветом текста'
+        else:
+            return render_template ('result.html', font_size=font_size, bgc=bgc, text_color=text_color), headers
+    return render_template ('cookies.html', error=error)

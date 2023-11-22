@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Сайфулина Алина. {% block lab %}{% endblock %}</title>
     <link rel="stylesheet" href="{{url_for('static', filename = 'main.css')}}">
+    {% if request.cookies.get('text_color') and request.cookies.get('bgc') and request.cookies.get('font_size') %}
+    <style>
+        body {
+            color: {{ request.cookies.get('text_color') }};
+            background-color: {{ request.cookies.get('bgc') }};
+            font-size: {{ request.cookies.get('font_size') }}px;
+        }
+    </style>
+    {% endif %}
 </head>
 <body>
     <header>
