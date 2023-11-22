@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+
+{%block lab%}Лабораторная работа 4{%endblock%}
+
+{% block main %}
+<body>
+    <h1>Пример текста</h1>
+    <p  style="background-color: {{ bgc }}; color: {{ text_color }}; font-size: {{ font_size }}px;">Это текст с выбранными параметрами.</p>
+</body>
+{% endblock %}
+{% block menu%}
+    <a href = '/lab4/cookies'><button>Вернуться обратно</button></a>
+{%endblock%}
