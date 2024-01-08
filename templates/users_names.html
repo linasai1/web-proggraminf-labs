@@ -1,0 +1,15 @@
+{%extends "base.html"%}
+
+{%block lab%}Лабораторная работа 5{%endblock%}
+
+{%block main%}
+    <h1>Список пользователей</h1>
+    <ul>
+        {% for user_name in user_names %}
+            <li>{{ user_name }}</li>
+        {% endfor %}
+    </ul>
+{%endblock%}
+{% block menu%}
+    <a href = 'http://127.0.0.1:5000/menu' target="_blank">Меню</a>
+{%endblock%}

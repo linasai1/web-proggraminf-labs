@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Главная</title>
+<link rel="stylesheet"> 
+</head>
+
+<style>
+    header{
+background-color: #6B0908;
+color: #D6D6D6;
+padding: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+body{
+margin: 0;
+padding: 0;
+}
+
+.logo {
+font-size: 50px;
+font-weight: bold;
+}
+
+.buttons-container {
+display: flex;
+}
+
+.button {
+background-color: #D6D6D6;
+color: #6B0908;
+border: 1px solid #D6D6D6;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 20px;
+margin-left: 10px;
+cursor: pointer;
+}
+
+a{
+    cursor: pointer;
+}
+
+</style>
+<body>
+    <form>
+<header >
+    <div class="logo">База знаний</div>
+    <div><a href="/lab5/user_articles/">Мои заметки</a></div>
+    <div><a href="/lab5/new_article/">Создать заметку</a></div>
+    <div class="buttons-container">
+    <a href="/lab5/login5/"><button type="submit" id="login" class="button">Логин</button></a>
+    <a href="/lab5/registration/"><button type="submit" id="login" class="button">Регистрация</button></a>
+    <div>{{ username }}</div>
+    <a href="/lab5/logout"><button type="submit" id="logout" class="button">Выйти</button></a>
+    </div>
+</header>
+<main>
+    
+<a href = 'http://127.0.0.1:5000/menu' target="_blank">Вернуться в меню</a>
+</main>
+    </form>
+</body>
+</html>

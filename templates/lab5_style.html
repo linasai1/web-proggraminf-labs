@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block lab %}{% endblock %}</title>
+<link rel="stylesheet"> 
+</head>
+
+<style>
+    header{
+background-color: #6B0908;
+color: #D6D6D6;
+padding: 10px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+body{
+margin: 0;
+padding: 0;
+}
+
+.logo {
+font-size: 50px;
+font-weight: bold;
+color: #D6D6D6;
+}
+
+.buttons-container {
+display: flex;
+}
+
+.button {
+background-color: #D6D6D6;
+color: #6B0908;
+border: 1px solid #D6D6D6;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+border-radius: 20px;
+margin-left: 10px;
+cursor: pointer;
+}
+
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+
+</style>
+<body>
+    
+<header>
+    <a href="/lab5/general/"  class="logo">База знаний</a>
+    <div><a href="/lab5/user_articles/">Мои заметки</a></div>
+    <div><a href="/lab5/new_article/">Создать заметку</a></div>
+    <div class="buttons-container">
+    <form action="/lab5/login5/"><button id="login" class="button">Войти</button></form>
+    <form action="/lab5/registration/"><button id="registration" class="button">Регистрация</button></form>
+    <div>{{ username }}</div>
+    <form action="/lab5/logout/"><button type="submit" id="logout" class="button">Выйти</button></form>
+    </div>
+</header>
+<main>
+    <main>
+        {% block main%}{%endblock%}
+        {% block menu%}{%endblock%}
+    </main>
+<form action="/lab5/"><button>Вернуться в меню</button></form>
+</main>
+    
+</body>
+</html>

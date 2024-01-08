@@ -1,0 +1,21 @@
+{% extends "lab5_style.html" %}
+
+{% block lab %}{{article_title}}{% endblock %}
+
+{%block main%}
+
+    {% if current_user.username %}
+    <div class="username">
+        {{ current_user.username }}
+    </div>
+    {% else %}
+    <div class="username">Anon</div>
+    {% endif %}
+
+    <div>
+        <h1>{{article_title}}</h1>
+        {%for paragraph in arcticle_text%}
+        <p>{{paragraph}}</p>
+        {%endfor%}
+    </div>
+    {%endblock%}
