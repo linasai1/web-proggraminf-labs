@@ -14,8 +14,8 @@ def lab():
 def dbConnect():
     conn = psycopg2.connect(
         host="127.0.0.1",
-        database = 'knowledge_base',
-        user = 'panchuk_anastasia_knowledge_base',
+        database = 'Knowledge_base_for_Alina_Saifulina',
+        user = 'Alina_Saifulina_knowledge_base',
         password='123'
     )
 
