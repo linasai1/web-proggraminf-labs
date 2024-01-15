@@ -1,5 +1,5 @@
 from flask import Flask, redirect, url_for, render_template
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 from Db import db
 from Db.models import users
 from flask_login import LoginManager
