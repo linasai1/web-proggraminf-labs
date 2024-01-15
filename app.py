@@ -1,10 +1,8 @@
 from flask import Flask, redirect, url_for, render_template
-from lab1 import lab1
-from lab2 import lab2
-from lab3 import lab3
-from lab4 import lab4
-from lab5 import lab5
-from lab6 import lab6
+from flask_sqlalchemy import SQLAlchemy
+from Db import db
+from Db.models import users
+from flask_login import LoginManager
 
 app = Flask(__name__)
 app.secret_key = '123'
@@ -28,6 +26,13 @@ login_manager.init_app(app)
 @login_manager.user_loader
 def load_users(user_id):
     return users.query.get(int(user_id))
+
+from lab1 import lab1
+from lab2 import lab2
+from lab3 import lab3
+from lab4 import lab4
+from lab5 import lab5
+from lab6 import lab6
 
 
 app = Flask(__name__)
