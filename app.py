@@ -5,6 +5,7 @@ from Db.models import users
 from flask_login import LoginManager
 
 app = Flask(__name__)
+
 app.secret_key = '123'
 user_db = 'Alina_Saifulina_knowledge_base_orm'
 host_ip = '127.0.0.1'
